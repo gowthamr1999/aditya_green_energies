@@ -126,4 +126,4 @@ def contact_form(request):
         
         return redirect("contact")  # reload with success message
     
-    return redirect('index')
+    return render(request, "contact.html")

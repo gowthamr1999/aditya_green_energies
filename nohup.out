@@ -1,0 +1,59 @@
+Watching for file changes with StatReloader
+[19/Aug/2025 06:05:35] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:18:34] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:20:07] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:24:03] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:24:04] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 167743
+[19/Aug/2025 06:31:58] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:35:34] "GET / HTTP/1.0" 200 26959
+Not Found: /favicon.ico
+[19/Aug/2025 06:35:37] "GET /favicon.ico HTTP/1.0" 404 2711
+[19/Aug/2025 06:35:47] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:42:23] "GET / HTTP/1.0" 200 26959
+Not Found: /sse
+[19/Aug/2025 06:51:12] "GET /sse HTTP/1.1" 404 2692
+[19/Aug/2025 06:51:40] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:52:56] "GET / HTTP/1.0" 200 26959
+Not Found: /favicon.ico
+[19/Aug/2025 06:53:10] "GET /favicon.ico HTTP/1.0" 404 2711
+[19/Aug/2025 06:53:48] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 06:53:57] "GET / HTTP/1.1" 200 26959
+[19/Aug/2025 06:53:57,563] - Broken pipe from ('64.62.197.2', 4176)
+Not Found: /favicon.ico
+[19/Aug/2025 06:54:12] "GET /favicon.ico HTTP/1.1" 404 2716
+[19/Aug/2025 07:01:43] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 07:12:37] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 07:21:17] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 07:33:21] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 07:43:11] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 07:50:43] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 08:38:19] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 10:00:42] "GET / HTTP/1.0" 200 26959
+Not Found: /favicon.ico
+[19/Aug/2025 10:01:00] "GET /favicon.ico HTTP/1.0" 404 2711
+Not Found: /robots.txt
+[19/Aug/2025 10:01:01] "GET /robots.txt HTTP/1.0" 404 2708
+Not Found: /sitemap.xml
+[19/Aug/2025 10:01:01] "GET /sitemap.xml HTTP/1.0" 404 2711
+Not Found: /config.json
+[19/Aug/2025 10:01:02] "GET /config.json HTTP/1.0" 404 2711
+[19/Aug/2025 10:12:16] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 10:12:17] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+[19/Aug/2025 10:12:18] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 10:12:19] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 167743
+Not Found: /favicon.ico
+[19/Aug/2025 10:12:21] "GET /favicon.ico HTTP/1.0" 404 2711
+[19/Aug/2025 10:29:21] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 10:37:12] "GET / HTTP/1.0" 200 26959
+Not Found: /favicon.ico
+[19/Aug/2025 10:37:12] "GET /favicon.ico HTTP/1.0" 404 2711
+[19/Aug/2025 11:08:30] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 11:09:32] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 11:56:49] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 12:39:57] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 12:40:13] "GET / HTTP/1.0" 200 26959
+[19/Aug/2025 12:47:06] "GET / HTTP/1.0" 200 26959
+Not Found: /manager/text/list
+[19/Aug/2025 12:55:03] "GET /manager/text/list HTTP/1.0" 404 2729
+[19/Aug/2025 13:32:09] code 400, message Bad request syntax ('JDWP-Handshake')
+[19/Aug/2025 13:32:09] "JDWP-Handshake" 400 -
