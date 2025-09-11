@@ -111,7 +111,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = ['0.0.0.0','54.242.53.188']
+ALLOWED_HOSTS = ['0.0.0.0','54.242.53.188','adityagreenenergies.in']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/

@@ -33,7 +33,7 @@ class Service(models.Model):
     title = models.CharField(max_length=200)
     icon = models.CharField(max_length=50)  # Lucide icon name
     description = models.TextField()
-    features = models.JSONField(default=list)  # List of features
+    features = models.JSONField()  # List of features
     is_active = models.BooleanField(default=True)
     order = models.PositiveIntegerField(default=0)
     
@@ -42,6 +42,10 @@ class Service(models.Model):
     
     def __str__(self):
         return self.title
+
+    def get_features_list(self):
+        return self.features
+
 
 class Benefit(models.Model):
     """Model for solar benefits"""
