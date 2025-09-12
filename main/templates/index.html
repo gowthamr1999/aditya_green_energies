@@ -150,6 +150,51 @@
   </div>
 </section>
 
+{% load static %}
+
+<!-- About Us Section -->
+<section id="about" class="py-16 sm:py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-8 items-center">
+      
+      <!-- Left: Personal / About Image -->
+      <div class="relative rounded-2xl overflow-hidden shadow-lg">
+        <img src="{% if about and about.image %}{{ about.image }}{% else %}{% static 'images/solar-hero.jpg' %}{% endif %}" 
+             alt="About Aditya Green Energies"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-green-600/40 to-green-800/30"></div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="space-y-6">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-green-700">
+          {% if about and about.title %}{{ about.title }}{% else %}About Aditya Green Energies{% endif %}
+        </h2>
+        <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+          {% if about and about.description %}
+            {{ about.description }}
+          {% else %}
+            We are a trusted partner of Waaree Energies, delivering premium solar solutions in Bengaluru and beyond. 
+            Our mission is to empower homes and businesses with sustainable energy that saves money and protects the planet.
+          {% endif %}
+        </p>
+
+        <!-- Call-to-Action Buttons -->
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#services" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-md text-center transition-all shadow-md hover:shadow-lg">
+            Explore Services
+          </a>
+          <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold px-6 py-3 rounded-md text-center transition-all shadow-md hover:shadow-lg">
+            Get a Free Quote
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Contact Section -->
 <section id="contact" class="py-16 sm:py-20 bg-gray-50">
   <div class="container mx-auto px-4">
@@ -175,7 +220,7 @@
             </div>
             <div>
               <p class="text-sm text-gray-500">Call Us</p>
-              <p class="text-lg font-semibold text-gray-800">(+91) 9535156339</p>
+              <p class="text-lg font-semibold text-gray-800"> {{ contact.phone|default:"+91 9535156339" }}</p>
             </div>
           </div>
 
@@ -186,7 +231,7 @@
             </div>
             <div>
               <p class="text-sm text-gray-500">Email</p>
-              <p class="text-lg font-semibold text-gray-800 break-all">adityagreenenergies@gmail.com</p>
+              <p class="text-lg font-semibold text-gray-800 break-all">{{ contact.email|default:"adityagreenenergies@gmail.com" }}</p>
             </div>
           </div>
 
@@ -198,8 +243,12 @@
             <div>
               <p class="text-sm text-gray-500">Visit Us</p>
               <p class="text-lg font-semibold text-gray-800">
-                Sy No 184/4, Sarjapura Main Road, Dommasandra,<br>
-                Bengaluru, Karnataka, 562125
+                {% if contact and contact.address %}
+                  {{ contact.address|linebreaksbr }}
+                {% else %}
+                  Sy No 184/4, Sarjapura Main Road, Dommasandra,<br>
+                  Bengaluru, Karnataka, 562125
+                {% endif %}
               </p>
             </div>
           </div>

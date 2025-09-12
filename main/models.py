@@ -76,3 +76,44 @@ class Testimonial(models.Model):
     
     def __str__(self):
         return f"{self.name} - {self.rating} stars"
+
+
+
+class About(models.Model):
+    title = models.CharField(
+        max_length=200,
+        default="About Aditya Green Energies",
+        help_text="Title for the About Us section"
+    )
+    description = models.TextField(
+        blank=True,
+        null=True,
+        help_text="Description for the About Us section",
+        default=(
+            "We are a trusted partner of Waaree Energies, delivering premium solar "
+            "solutions in Bengaluru and beyond. Our mission is to empower homes and "
+            "businesses with sustainable energy that saves money and protects the planet."
+        )
+    )
+    image = models.URLField(
+        blank=True,
+        null=True,
+        help_text="URL of the image for About Us. If empty, a default image will be shown"
+    )
+
+    def __str__(self):
+        return self.title
+
+
+class ContactInfo(models.Model):
+    phone = models.CharField(max_length=100, default="+91 9535156339")
+    email = models.EmailField(default="adityagreenenergies@gmail.com")
+    address = models.TextField(default="Sy No 184/4, Sarjapura Main Road, Dommasandra, Bengaluru, Karnataka, 562125")
+
+    # Optional social links
+    whatsapp = models.CharField(max_length=20, blank=True, null=True)
+    facebook = models.URLField(blank=True, null=True)
+    instagram = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Contact Info ({self.phone})"

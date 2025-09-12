@@ -4,14 +4,18 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Service, Benefit
+from .models import Service, Benefit, About, ContactInfo
 
 def index(request):
     services = Service.objects.all()
     benefits = Benefit.objects.all()
+    about = About.objects.first()
+    contact = ContactInfo.objects.first()
     context = {
+        "about": about,
         'services': services,
         'benefits': benefits,
+        "contact": contact,
         'hero_image': '/static/images/solar-hero.jpg',
     }
     return render(request, 'index.html', context)
