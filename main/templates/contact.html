@@ -25,6 +25,11 @@
                 <div class="p-8 rounded-2xl bg-red-100 text-red-900 border border-red-300 shadow-lg font-medium">
                     ❌ {{ message }}
                 </div>
+                <script>
+                    setTimeout(function(){
+                        window.location.href = "/";
+                    }, 5000);
+                </script>
             {% endif %}
         {% endfor %}
     {% endif %}

@@ -117,3 +117,17 @@ class ContactInfo(models.Model):
 
     def __str__(self):
         return f"Contact Info ({self.phone})"
+
+
+class ContactInquiry(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20, blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
+    electric_bill = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name or ''} - {self.email}"

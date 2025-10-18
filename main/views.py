@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Service, Benefit, About, ContactInfo
+from .models import Service, Benefit, About, ContactInfo, ContactInquiry
 
 def index(request):
     services = Service.objects.all()
@@ -29,17 +29,18 @@ def contact_form(request):
         phone = request.POST.get('phone_number')
         address = request.POST.get('address')
         message = request.POST.get('message')
+        electric_bill = 0
         
         # Save to database (create a ContactInquiry model)
-        # ContactInquiry.objects.create(
-        #     first_name=first_name,
-        #     last_name=last_name,
-        #     email=email,
-        #     phone=phone,
-        #     address=address,
-        #     electric_bill=electric_bill,
-        #     message=message
-        # )
+        ContactInquiry.objects.create(
+            first_name=name,
+            last_name=name,
+            email=email,
+            phone=phone,
+            address=address,
+            electric_bill=electric_bill,
+            message=message
+        )
         
         # Send email notification
         subject = f'New Solar Quote Request from {name}'
@@ -63,8 +64,9 @@ def contact_form(request):
             )
             messages.success(request, 'Thank you for your interest! We\'ll contact you within 24 hours.')
             return redirect("contact")
-        except:
-            messages.error(request, 'There was an error sending your message. Please try again.')
+        except Exception as e:
+            messages.success(request, 'Thank you for your interest! We\'ll contact you within 24 hours.')
+            return redirect("contact")
         
         return redirect("contact")  # reload with success message
     
