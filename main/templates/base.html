@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,13 +63,6 @@ boxShadow: {
 
 <body class="bg-background text-text flex flex-col min-h-screen">
 
-<!-- Glowing Background Leaves -->
-<div class="absolute inset-0 pointer-events-none overflow-hidden">
-<i data-lucide="leaf" class="absolute top-10 left-10 w-10 h-10 text-primary opacity-30 leaf-glow"></i>
-<i data-lucide="leaf" class="absolute top-32 left-1/4 w-8 h-8 text-primary opacity-25 leaf-glow"></i>
-<i data-lucide="leaf" class="absolute top-16 right-20 w-12 h-12 text-primary opacity-30 leaf-glow"></i>
-<i data-lucide="leaf" class="absolute bottom-20 right-10 w-14 h-14 text-primary opacity-30 leaf-glow"></i>
-</div>
 
 <!-- Navbar (Centered Links) -->
 <header class="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
@@ -107,24 +101,40 @@ boxShadow: {
   </div>
 </div>
 
-<section class="relative h-[80vh] flex flex-col items-center justify-center text-center bg-gradient-to-b from-yellow-50 via-white to-orange-50 px-4">
-  
-<div class="relative z-10 space-y-4">
-<h1 class="text-4xl md:text-6xl font-extrabold text-green-800 drop-shadow-lg">Aditya Green Energies</h1>
-<p class="text-lg md:text-2xl text-gray-700">Premium Solar Solutions for Homes and Businesses</p>
-<p class="font-semibold text-green-600 hover:text-green-500 transition">
-    Authorised Partner – 
-    <a href="https://waaree.com/" target="_blank" class="underline hover:text-green-400 transition">
+<section class="relative min-h-screen flex flex-col items-center justify-center text-center bg-white px-4 overflow-hidden">
+
+  <!-- Foreground image -->
+  <img src="{% static 'images/logo.png' %}"
+       alt="Solar Foreground"
+       class="absolute top-1/2 left-1/2 w-[400px] h-[300px] -translate-x-[50%] -translate-y-[110%] z-30 opacity-95 pointer-events-none object-contain">
+
+  <!-- Text Content -->
+  <div class="relative z-20 space-y-4 mt-32">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-green-900 drop-shadow-md">
+      Aditya Green Energies
+    </h1>
+    <p class="text-lg md:text-2xl text-gray-700">
+      Premium Solar Solutions for Homes and Businesses
+    </p>
+    <p class="font-semibold text-green-700 hover:text-green-600 transition">
+      Authorised Partner –
+      <a href="https://waaree.com/" target="_blank"
+         class="underline hover:text-green-500 transition">
         Waaree Energies Ltd
-    </a>
-</p>
-<div class="mt-10">
-<a href="#contact" class="bg-secondary text-white font-semibold px-6 py-3 rounded-full shadow-glow-solar hover:bg-green-500 transition">
-    Get a Free Quote
-</a>
-</div>
-</div>
+      </a>
+    </p>
+
+    <div class="mt-10">
+      <a href="#contact"
+         class="bg-secondary text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-green-500 transition">
+        Get a Free Quote
+      </a>
+    </div>
+  </div>
 </section>
+
+
+
 
 
 

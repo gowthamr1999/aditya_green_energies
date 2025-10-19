@@ -227,3 +227,1081 @@ Error: That port is already in use.
 /home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/db/models/base.py:368: RuntimeWarning: Model 'main.contactinquiry' was already registered. Reloading models is not advised as it can lead to inconsistencies, most notably with related models.
   new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
 Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/main/views.py", line 21, in index
+    return render(request, 'index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 112: 'static'. Did you forget to register or load this tag?
+[18/Oct/2025 15:49:15] "GET / HTTP/1.0" 500 177826
+[18/Oct/2025 15:49:53] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:49:54] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 15:49:54] "GET /static/images/hero.png HTTP/1.0" 404 1867
+[18/Oct/2025 15:49:54] "GET /static/images/fav.png HTTP/1.0" 304 0
+[18/Oct/2025 15:50:51] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:50:51] "GET /static/images/hero.jpg HTTP/1.0" 200 21770
+[18/Oct/2025 15:50:53] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:51:46] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:51:46] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 15:51:52] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:53:19] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:53:19] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 15:53:19] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 15:54:52] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:54:53] "GET /static/images/hero.jpg HTTP/1.0" 200 21770
+[18/Oct/2025 15:54:53] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 15:55:21] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:55:21] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 15:55:24] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:55:25] "GET /static/images/fav.png HTTP/1.0" 304 0
+[18/Oct/2025 15:56:05] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:56:05] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 34665
+[18/Oct/2025 15:56:05] "GET /static/images/hero.jpg HTTP/1.0" 200 21770
+[18/Oct/2025 15:56:06] "GET /static/images/fav.png HTTP/1.0" 200 34665
+[18/Oct/2025 15:56:37] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:56:37] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:56:38] "GET /static/images/hero.jpg HTTP/1.0" 200 21770
+[18/Oct/2025 15:56:38] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 34665
+[18/Oct/2025 15:56:41] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:59:27] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:59:28] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 15:59:29] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 15:59:42] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 16:11:10] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 16:11:11] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 16:11:11] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+[18/Oct/2025 16:14:13] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 16:14:14] "GET /static/images/hero.jpg HTTP/1.0" 200 21770
+[18/Oct/2025 16:14:14] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 34665
+[18/Oct/2025 16:14:15] "GET /static/images/fav.png HTTP/1.0" 200 34665
+[18/Oct/2025 16:50:32] "GET / HTTP/1.0" 200 34156
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 17:47:18] "GET /.env HTTP/1.0" 400 66335
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 17:47:18] "POST / HTTP/1.0" 400 66736
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 18:32:03] "GET / HTTP/1.1" 400 65954
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 18:37:47] "GET / HTTP/1.1" 400 65665
+[18/Oct/2025 18:37:47] code 400, message Bad request syntax ('MGLNDD_52.206.40.72_8000')
+[18/Oct/2025 18:37:47] "MGLNDD_52.206.40.72_8000" 400 -
+[18/Oct/2025 18:45:54] "GET /static/images/fav.png HTTP/1.0" 200 34665
+[18/Oct/2025 18:45:55] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 34665
+[18/Oct/2025 18:45:55] "GET / HTTP/1.0" 200 34156
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 19:56:29] "GET /.env HTTP/1.0" 400 66341
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 19:56:29] "POST / HTTP/1.0" 400 66742
+[18/Oct/2025 20:18:07] "GET / HTTP/1.0" 200 34156
+[18/Oct/2025 20:18:11] "GET /static/images/fav.png HTTP/1.0" 200 34665
+Not Found: /favicon.ico
+[18/Oct/2025 20:18:28] "GET /favicon.ico HTTP/1.0" 404 2720
+[18/Oct/2025 20:19:05] "GET / HTTP/1.0" 200 34156
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 20:56:57] "GET / HTTP/1.0" 400 66372
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 20:58:45] "GET /aaa9 HTTP/1.1" 400 65615
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 20:58:49] "GET /aab8 HTTP/1.1" 400 65615
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 20:58:53] "GET / HTTP/1.1" 400 65665
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 22:04:17] "GET / HTTP/1.1" 400 65885
+[18/Oct/2025 22:04:34] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x9d\x01\x00\x00\x99\x03\x03T,Ùê¡')
+[18/Oct/2025 22:04:34] You're accessing the development server over HTTPS, but it only supports HTTP.
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 22:04:46] "GET / HTTP/1.1" 400 65885
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 22:04:49] "GET /api/session/properties HTTP/1.1" 400 66033
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 22:05:26] "GET /helpdesk/WebObjects/Helpdesk.woa HTTP/1.1" 400 66143
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 22:05:49] "GET /owncloud/status.php HTTP/1.1" 400 66000
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 22:06:09] "GET /status.php HTTP/1.1" 400 65901
+[18/Oct/2025 22:33:50] code 400, message Bad request syntax ('MGLNDD_52.206.40.72_8000')
+[18/Oct/2025 22:33:50] "MGLNDD_52.206.40.72_8000" 400 -
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 23:02:41] "GET /.env HTTP/1.0" 400 66339
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[18/Oct/2025 23:02:42] "POST / HTTP/1.0" 400 66740
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 00:21:43] "GET / HTTP/1.0" 400 66171
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 01:18:58] "GET / HTTP/1.0" 400 66717
+[19/Oct/2025 01:18:58] "GET / HTTP/1.0" 200 34156
+[19/Oct/2025 01:18:59] "GET /static/images/fav.png HTTP/1.0" 200 34665
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 01:32:50] "GET / HTTP/1.0" 400 66270
+[19/Oct/2025 01:45:01] code 400, message Bad request version ('jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x00\x7f\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+[19/Oct/2025 01:45:01] You're accessing the development server over HTTPS, but it only supports HTTP.
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 02:00:03] "GET /owa/auth/logon.aspx HTTP/1.0" 400 66275
+Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72:8000'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 02:00:33] "GET / HTTP/1.1" 400 65875
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 02:09:27] "GET /.git/config HTTP/1.0" 400 66429
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 02:26:22] "GET / HTTP/1.0" 400 66270
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 02:40:39] "GET /developmentserver/metadatauploader HTTP/1.0" 400 66438
+Not Found: /.git/config
+[19/Oct/2025 02:45:24] "GET /.git/config HTTP/1.0" 404 2720
+Not Found: /.git/config
+[19/Oct/2025 02:55:16] "GET /.git/config HTTP/1.0" 404 2720
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:00:50] "GET / HTTP/1.0" 400 66422
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:06:09] "GET /.env HTTP/1.0" 400 66341
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:06:10] "POST / HTTP/1.0" 400 66742
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:07:06] "GET /webui/ HTTP/1.0" 400 66448
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:13:44] "GET / HTTP/1.0" 400 66422
+[19/Oct/2025 03:21:57] "GET / HTTP/1.0" 200 34156
+[19/Oct/2025 03:21:57] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[19/Oct/2025 03:21:57] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:27:52] "GET /geoserver/web/ HTTP/1.0" 400 66536
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:31:50] "GET /.git/config HTTP/1.0" 400 66455
+Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '52.206.40.72'. You may need to add '52.206.40.72' to ALLOWED_HOSTS.
+[19/Oct/2025 03:37:29] "GET /actuator/health HTTP/1.0" 400 66229
+Invalid HTTP_HOST header: 'ec2-52-206-40-72.compute-1.amazonaws.com'. You may need to add 'ec2-52-206-40-72.compute-1.amazonaws.com' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'ec2-52-206-40-72.compute-1.amazonaws.com'. You may need to add 'ec2-52-206-40-72.compute-1.amazonaws.com' to ALLOWED_HOSTS.
+[19/Oct/2025 03:43:08] "GET /.git/config HTTP/1.0" 400 66861
+[19/Oct/2025 03:56:51] "GET / HTTP/1.0" 200 34156
+[19/Oct/2025 03:56:51] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[19/Oct/2025 03:56:51] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+[19/Oct/2025 03:58:02] "GET /static/images/hero.jpg HTTP/1.1" 200 21770
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[19/Oct/2025 03:58:03] "GET /favicon.ico HTTP/1.1" 400 67459
+[19/Oct/2025 03:58:54] "GET / HTTP/1.0" 200 34079
+[19/Oct/2025 03:58:55] "GET /static/images/fav.png HTTP/1.0" 304 0
+[19/Oct/2025 03:59:45] "GET / HTTP/1.0" 200 34146
+[19/Oct/2025 04:02:31] "GET / HTTP/1.0" 200 34146
+[19/Oct/2025 04:02:31] "GET /static/images/hero.jpg HTTP/1.0" 200 21770
+[19/Oct/2025 04:02:31] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 34665
+[19/Oct/2025 04:02:32] "GET /static/images/fav.png HTTP/1.0" 200 34665
+[19/Oct/2025 04:10:42] "GET / HTTP/1.0" 200 34146
+Not Found: /.git/config
+[19/Oct/2025 04:17:55] "GET /.git/config HTTP/1.0" 404 2724
+[19/Oct/2025 04:41:43] "GET / HTTP/1.0" 200 34146
+[19/Oct/2025 04:42:40] "POST /contact/ HTTP/1.0" 302 0
+[19/Oct/2025 04:42:40] "GET /contact/ HTTP/1.0" 200 1049
+Not Found: /favicon.ico
+[19/Oct/2025 04:42:40] "GET /favicon.ico HTTP/1.0" 404 2720
+[19/Oct/2025 04:42:45] "GET / HTTP/1.0" 200 34146
+Not Found: /.git/config
+[19/Oct/2025 04:49:32] "GET /.git/config HTTP/1.0" 404 2724
+[19/Oct/2025 05:06:15] "GET / HTTP/1.0" 200 34146
+[19/Oct/2025 05:06:15] "GET /static/images/hero.jpg HTTP/1.0" 200 21770
+[19/Oct/2025 05:06:15] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 34665
+[19/Oct/2025 05:06:28] "GET / HTTP/1.0" 200 34146
+[19/Oct/2025 05:06:30] "GET /static/images/fav.png HTTP/1.0" 200 34665
+[19/Oct/2025 05:06:33] "GET / HTTP/1.0" 200 34146
+[19/Oct/2025 05:12:49] "GET / HTTP/1.0" 200 33910
+[19/Oct/2025 05:14:14] "GET / HTTP/1.0" 200 33878
+[19/Oct/2025 05:16:01] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:16:02] "GET /static/images/hero.jpg HTTP/1.0" 304 0
+[19/Oct/2025 05:16:26] "GET / HTTP/1.0" 200 33884
+[19/Oct/2025 05:16:29] "GET / HTTP/1.0" 200 33884
+[19/Oct/2025 05:16:33] "GET / HTTP/1.0" 200 33884
+[19/Oct/2025 05:17:13] "GET / HTTP/1.0" 200 33884
+[19/Oct/2025 05:17:39] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:17:54] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:17:55] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:17:57] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:18:03] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:18:04] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:18:14] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:19:25] "GET / HTTP/1.0" 200 33882
+[19/Oct/2025 05:19:39] "GET / HTTP/1.0" 200 33882
+[19/Oct/2025 05:19:52] "GET / HTTP/1.0" 200 33882
+[19/Oct/2025 05:20:02] "GET / HTTP/1.0" 200 33882
+[19/Oct/2025 05:20:03] "GET / HTTP/1.0" 200 33882
+[19/Oct/2025 05:20:05] "GET / HTTP/1.0" 200 33882
+[19/Oct/2025 05:20:07] "GET / HTTP/1.0" 200 33882
+[19/Oct/2025 05:20:26] "GET / HTTP/1.0" 200 33880
+[19/Oct/2025 05:21:06] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:21:23] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:21:24] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:22:26] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:22:33] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:22:35] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:22:38] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:22:40] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:22:56] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:23:03] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:23:05] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:23:06] "GET / HTTP/1.0" 200 33881
+[19/Oct/2025 05:23:17] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:23:17] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:23:17] "GET /static/images/solar-hero.jpg HTTP/1.0" 304 0
+[19/Oct/2025 05:23:18] "GET /static/images/fav.png HTTP/1.0" 304 0
+[19/Oct/2025 05:23:22] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:23:25] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:23:29] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:23:34] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:13] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:22] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:24] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:30] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:31] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:33] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:41] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:24:59] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:24:59] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:25:01] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:25:02] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:25:55] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:25:57] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:25:58] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:00] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:03] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:05] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:09] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:12] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:13] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:22] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:26:50] "GET / HTTP/1.0" 200 33913
+[19/Oct/2025 05:26:59] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:27:51] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:27:58] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:28:27] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:28:29] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:28:36] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:28:40] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:28:43] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:28:44] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:28:54] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:29:14] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:29:15] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:29:17] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:29:43] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:29:44] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:31:32] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:31:32] "GET /static/images/home.jpg HTTP/1.0" 404 1867
+[19/Oct/2025 05:31:51] "GET / HTTP/1.0" 200 33890
+[19/Oct/2025 05:31:51] "GET /static/images/home.jpg HTTP/1.0" 404 1867
+[19/Oct/2025 05:32:00] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:32:29] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:32:32] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:32:33] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:33:03] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:17] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:19] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:20] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:21] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:22] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:23] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:24] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:33:54] "GET / HTTP/1.0" 200 33994
+[19/Oct/2025 05:34:09] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:34:16] "GET / HTTP/1.0" 200 33992
+[19/Oct/2025 05:34:24] "GET / HTTP/1.0" 200 33993
+[19/Oct/2025 05:35:10] "GET / HTTP/1.0" 200 33992
+[19/Oct/2025 05:35:28] "GET / HTTP/1.0" 200 33896
+[19/Oct/2025 05:35:48] "GET / HTTP/1.0" 200 33899
+[19/Oct/2025 05:35:59] "GET / HTTP/1.0" 200 33899
+[19/Oct/2025 05:36:05] "GET / HTTP/1.0" 200 33898
+[19/Oct/2025 05:36:12] "GET / HTTP/1.0" 200 33898
+[19/Oct/2025 05:36:48] "GET / HTTP/1.0" 200 33898
+[19/Oct/2025 05:36:50] "GET / HTTP/1.0" 200 33898
+[19/Oct/2025 05:36:52] "GET / HTTP/1.0" 200 33898
+[19/Oct/2025 05:36:54] "GET / HTTP/1.0" 200 33898
+[19/Oct/2025 05:37:15] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:17] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:18] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:19] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:24] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:33] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:35] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:36] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:37] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:40] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:37:42] "GET / HTTP/1.0" 200 33620
+[19/Oct/2025 05:38:08] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:08] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:38:09] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:10] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:38:10] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:11] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:38:11] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:11] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:38:13] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:13] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:38:22] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:22] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:38:34] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:34] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:38:43] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:38:44] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 54, in get_response
+    return self.serve(request)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 50, in serve
+    return serve(request, self.file_path(request.path), insecure=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/views.py", line 38, in serve
+    raise Http404("'%s' could not be found" % path)
+django.http.response.Http404: 'images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg' could not be found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 81, in __call__
+    return super().__call__(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/wsgi.py", line 124, in __call__
+    response = self.get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 56, in get_response
+    return response_for_exception(request, e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 66, in response_for_exception
+    response = debug.technical_404_response(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/views/debug.py", line 652, in technical_404_response
+    return HttpResponseNotFound(t.render(c))
+                                ^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 925, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 286, in build_absolute_uri
+    location = self._current_scheme_host + location.removeprefix("//")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 296, in _current_scheme_host
+    return "{}://{}".format(self.scheme, self.get_host())
+                                         ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[19/Oct/2025 05:38:47] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg HTTP/1.1" 500 59
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[19/Oct/2025 05:38:47] "GET /favicon.ico HTTP/1.1" 400 67490
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 54, in get_response
+    return self.serve(request)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 50, in serve
+    return serve(request, self.file_path(request.path), insecure=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/views.py", line 38, in serve
+    raise Http404("'%s' could not be found" % path)
+django.http.response.Http404: 'images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg' could not be found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 81, in __call__
+    return super().__call__(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/wsgi.py", line 124, in __call__
+    response = self.get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/contrib/staticfiles/handlers.py", line 56, in get_response
+    return response_for_exception(request, e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 66, in response_for_exception
+    response = debug.technical_404_response(request, exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/views/debug.py", line 652, in technical_404_response
+    return HttpResponseNotFound(t.render(c))
+                                ^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/template/base.py", line 925, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 286, in build_absolute_uri
+    location = self._current_scheme_host + location.removeprefix("//")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 296, in _current_scheme_host
+    return "{}://{}".format(self.scheme, self.get_host())
+                                         ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[19/Oct/2025 05:38:56] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.1" 500 59
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[19/Oct/2025 05:38:56] "GET /favicon.ico HTTP/1.1" 400 67494
+[19/Oct/2025 05:39:17] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:39:17] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:39:18] "GET /static/images/solar-hero.jpg HTTP/1.0" 200 34665
+[19/Oct/2025 05:39:19] "GET /static/images/fav.png HTTP/1.0" 200 34665
+[19/Oct/2025 05:39:22] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:39:22] "GET / HTTP/1.0" 200 33649
+[19/Oct/2025 05:39:22] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:39:22] "GET /static/images/Gemini_Generated_Image_gvs5ggvs5ggvs5gg.jpg HTTP/1.0" 404 1972
+[19/Oct/2025 05:39:24] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:39:24] "GET /static/images/logo.png HTTP/1.0" 200 755231
+[19/Oct/2025 05:39:30] "GET /static/images/logo.png HTTP/1.1" 200 755231
+[19/Oct/2025 05:39:31] "GET / HTTP/1.0" 200 33614
+Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/aditya_green/venv/lib/python3.12/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[19/Oct/2025 05:39:31] "GET /favicon.ico HTTP/1.1" 400 67459
+[19/Oct/2025 05:39:33] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:39:35] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:39:35] "GET /static/images/logo.png HTTP/1.0" 200 755231
+[19/Oct/2025 05:39:49] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:39:49] "GET /static/images/logo.png HTTP/1.0" 200 755231
+[19/Oct/2025 05:39:58] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:02] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:04] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:06] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:13] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:14] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:17] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:22] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:23] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:26] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:28] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:34] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:37] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:38] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:39] "GET /static/images/logo.png HTTP/1.0" 304 0
+[19/Oct/2025 05:40:41] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:42] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:44] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:45] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:47] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:49] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:55] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:40:59] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:04] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:05] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:09] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:15] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:21] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:32] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:37] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:38] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:41] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:45] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:51] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:53] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:56] "GET / HTTP/1.0" 200 33614
+[19/Oct/2025 05:41:56] "GET /static/images/logo.png HTTP/1.0" 304 0
